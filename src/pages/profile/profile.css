@@ -1,0 +1,56 @@
+.profilePage .profileContentWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.profilePage .profileContentWrapper .profileInfoElement {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-bottom: 8px;
+}
+.profilePage .profileContentWrapper .profileInfoElement:not(:last-child) {
+  border-bottom: 1px #d7d7d7 solid;
+}
+.profilePage .profileContentWrapper .profileInfoElement > span {
+  color: #999999;
+}
+.profilePage .profileContentWrapper .profileContent {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.profilePage .profileContentWrapper .profileContent .profileAvatarWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.profilePage .profileContentWrapper .profileContent .profileAvatarWrapper .profileAvatar {
+  width: 130px;
+  height: 130px;
+  border: 1px green solid;
+  border-radius: 50%;
+}
+.profilePage .profileContentWrapper .profileContent .profileAvatarWrapper .nickname {
+  margin-top: 20px;
+  text-align: center;
+}
+.profilePage .profileContentWrapper .profileContent .profileInfo {
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profilePage .profileContentWrapper .profileControls {
+  display: flex;
+  flex-direction: column;
+}
+.profilePage .profileContentWrapper .profileControls .editInfo {
+  color: #3369F3;
+  cursor: pointer;
+}
+.profilePage .profileContentWrapper .profileControls .signout {
+  color: #FF0000;
+  cursor: pointer;
+}

@@ -1,0 +1,54 @@
+<section class="profilePage">
+    <nav>
+        <a href="#/chat">Вернуться к чатам</a>
+    </nav>
+    <div class="profileContentWrapper">
+        <div class="profileContent">
+            <div class="profileAvatarWrapper">
+                <figure>
+                    <div class="profileAvatar">
+                        <img src="" alt="">
+                    </div>
+                    <figcaption class="nickname">{{ nickname }}</figcaption>
+                </figure>
+            </div>
+            <div class="profileInfo">
+                <div class="profileInfoElement email">
+                    Почта
+                    <span>{{ email }}</span>
+                </div>
+                <div class="profileInfoElement login">
+                    Логин
+                    <span>{{ login }}</span>
+                </div>
+                <div class="profileInfoElement firstName">
+                    Имя
+                    <span>{{ firstName }}</span>
+                </div>
+                <div class="profileInfoElement secondName">
+                    Фамилия
+                    <span>{{ secondName }}</span>
+                </div>
+                <div class="profileInfoElement nickname">
+                    Имя в чате
+                    <span>{{ nickname }}</span>
+                </div>
+                <div class="profileInfoElement phone">
+                    Телефон
+                    <span>{{ phone }}</span>
+                </div>
+            </div>
+            <div class="profileControls">
+                <div class="profileInfoElement">
+                    <span class="editInfo" role="button">Изменить данные</span>
+                </div>
+                <div class="profileInfoElement">
+                    <span class="editInfo" role="button">Изменить пароль</span>
+                </div>
+                <div class="profileInfoElement">
+                    <span class="signout" role="button">Выйти</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
