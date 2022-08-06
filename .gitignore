@@ -1,5 +1,6 @@
 
 .cache/
+*cache/
 coverage/
 dist/*
 build/*
@@ -7,6 +8,7 @@ build/*
 node_modules/
 *.log
 *.css
+
 
 # OS generated files
 .DS_Store
