@@ -2,6 +2,6 @@ import Handlebars from "handlebars";
 import './chatHeader.css';
 import tpl from 'bundle-text:./chatHeader.hbs';
 
-const comp = Handlebars.compile(tpl);
+const component = Handlebars.compile(tpl);
 
-document.getElementById('root').innerHTML = comp();
+document.getElementById('root').innerHTML = component();

@@ -3,8 +3,12 @@
         <div class="toProfile">
             <a href="#/profile">Профиль ></a>
         </div>
-        <div class="search">Поиск</div>
-        <div class="chatList" id="chatList"></div>
+        <input class="search" type="text" placeholder="Поиск" />
+        <ul class="chatList" id="chatList">
+            {{#each chats}} {{> chatListItem}} {{/each}}
+        </ul>
     </div>
-    <div class="chatWrapper"></div>
+    <section class="chatWrapper">
+        {{> selectedChat}}
+    </section>
 </section>
