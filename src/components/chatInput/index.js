@@ -1,5 +1,5 @@
 import Handlebars from "handlebars";
-import './chatInput.css';
+import './chatInput.less';
 import tpl from 'bundle-text:./chatInput.hbs';
 
 const component = Handlebars.compile(tpl);
