@@ -1,4 +1,3 @@
-// import tpl from 'bundle-text:./index.hbs';
 import './style.css'
 import {renderLogin} from './pages/login/login';
 import {renderSignup} from './pages/login/signup';

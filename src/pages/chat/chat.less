@@ -20,17 +20,21 @@
             text-align: center;
             padding: 8px;
             background: #EFEFEF;
-            color: #999999;
             border-radius: 10px;
-            cursor: pointer;
+            border: none;
+            width: 100%;
         }
     }
 
-    .chatWrapper {
+    .chatWrapper, .selectedChatWrapper {
         display: inline-block;
         width: 100%;
         min-height: 100%;
-        background: #E5E5E5;
+        background-color: #E5E5E5;
+    }
+    
+    .selectedChatWrapper {
+        background-color: #E5E5E5;
     }
     
     .chatList {

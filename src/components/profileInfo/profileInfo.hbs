@@ -1,0 +1,65 @@
+<div class="profileInfo">
+    <div class="profileInfoElement email">
+        Почта
+        {{#if isChangeInfoMode}}
+            <input placeholder={{ email }} type="text" name="email">
+        {{else}}
+            <span>{{ email }}</span>
+        {{/if}}
+    </div>
+    <div class="profileInfoElement login">
+        Логин
+        {{#if isChangeInfoMode}}
+            <input placeholder={{ login }} type="text" name="login">
+        {{else}}
+            <span>{{ login }}</span>
+        {{/if}}
+    </div>
+    <div class="profileInfoElement firstName">
+        Имя
+        {{#if isChangeInfoMode}}
+            <input placeholder={{ firstName }} type="text" name="first_name">
+        {{else}}
+            <span>{{ firstName }}</span>
+        {{/if}}
+    </div>
+    <div class="profileInfoElement secondName">
+        Фамилия
+        {{#if isChangeInfoMode}}
+            <input placeholder={{ secondName }} type="text" name="second_name">
+        {{else}}
+            <span>{{ secondName }}</span>
+        {{/if}}
+    </div>
+    <div class="profileInfoElement nickname">
+        Имя в чате
+        {{#if isChangeInfoMode}}
+            <input placeholder={{ nickname }} type="text" name="display_name">
+        {{else}}
+            <span>{{ nickname }}</span>
+        {{/if}}
+    </div>
+    <div class="profileInfoElement phone">
+        Телефон
+        {{#if isChangeInfoMode}}
+            <input placeholder={{ phone }} type="text" name="phone">
+        {{else}}
+            <span>{{ phone }}</span>
+        {{/if}}
+    </div>
+</div>
+<div class="profileControls">
+    {{#if isChangeInfoMode}}
+        {{> submitButton}}
+    {{else}}
+        <div class="profileInfoElement">
+            <span class="editInfo" role="button">Изменить данные</span>
+        </div>
+        <div class="profileInfoElement">
+            <span class="editInfo" role="button">Изменить пароль</span>
+        </div>
+        <div class="profileInfoElement">
+            <span class="signout" role="button">Выйти</span>
+        </div>
+    {{/if}}
+</div>

@@ -566,21 +566,21 @@ window.addEventListener("locationchange", ()=>{
 });
 window.onload = routeHandler;
 
-},{"./pages/404/":"ig64b","./pages/chat/":"4sLvc","./pages/login/login":"j3UBZ","./pages/login/signup":"cYj27","./style.css":"6L53F","./pages/profile/":"fVlR8"}],"ig64b":[function(require,module,exports) {
+},{"./style.css":"6L53F","./pages/login/login":"j3UBZ","./pages/login/signup":"cYj27","./pages/404/":"ig64b","./pages/chat/":"4sLvc","./pages/profile/":"fVlR8"}],"6L53F":[function() {},{}],"j3UBZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "render404", ()=>render404);
+parcelHelpers.export(exports, "renderLogin", ()=>renderLogin);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-var _404Css = require("./404.css");
-var _404Hbs = require("bundle-text:./404.hbs");
-var _404HbsDefault = parcelHelpers.interopDefault(_404Hbs);
-const comp = (0, _handlebarsDefault.default).compile((0, _404HbsDefault.default));
-const render404 = ()=>{
+var _loginLess = require("./login.less");
+var _loginHbs = require("bundle-text:./login.hbs");
+var _loginHbsDefault = parcelHelpers.interopDefault(_loginHbs);
+const comp = (0, _handlebarsDefault.default).compile((0, _loginHbsDefault.default));
+const renderLogin = ()=>{
     document.getElementById("root").innerHTML = comp();
 };
 
-},{"handlebars":"dH8Fg","./404.css":"jm2am","bundle-text:./404.hbs":"eOnzr","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"dH8Fg":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./login.less":"1Bvf3","bundle-text:./login.hbs":"8Yhi4","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"dH8Fg":[function(require,module,exports) {
 // USAGE:
 // var handlebars = require('handlebars');
 /* eslint-disable no-var */ // var local = handlebars.create();
@@ -11898,8 +11898,8 @@ PrintVisitor.prototype.HashPair = function(pair) {
 },{"./visitor":"6BQ4C"}],"9C0N7":[function(require,module,exports) {
 "use strict";
 
-},{}],"jm2am":[function() {},{}],"eOnzr":[function(require,module,exports) {
-module.exports = "<div class=\"notFoundWrapper\">\r\n    <div class=\"notFound\">\r\n        <span>404</span>\r\n        <span>Вы попали не туда</span>\r\n        <a href=\"#/chat\">Перейти к чатам</a>\r\n    </div>\r\n</div>";
+},{}],"1Bvf3":[function() {},{}],"8Yhi4":[function(require,module,exports) {
+module.exports = "<div class=\"loginPage\">\r\n    <span class=\"enter\">Войти в аккаунт</span>\r\n    <form action=\"#/chat\" method=\"post\" class=\"inputForm\">\r\n        <div class=\"input\">\r\n            <input type=\"text\" name=\"login\" id=\"login\" placeholder=\"логин\">\r\n            <input type=\"password\" name=\"password\" id=\"password\" placeholder=\"пароль\">\r\n        </div>\r\n        <div class=\"loginControls\">\r\n            <button type=\"submit\" class=\"submit\">Войти</button>\r\n            <a href=\"#/signup\" class=\"redirect\">Регистрация</a>\r\n        </div>\r\n    </form>\r\n</div>";
 
 },{}],"j7FRh":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -11931,78 +11931,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"4sLvc":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "renderChatsPage", ()=>renderChatsPage);
-var _handlebars = require("handlebars");
-var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-var _chatLess = require("./chat.less");
-var _chatHbs = require("bundle-text:./chat.hbs");
-var _chatHbsDefault = parcelHelpers.interopDefault(_chatHbs);
-var _ = require("/src/components/chatElement/");
-const comp = (0, _handlebarsDefault.default).compile((0, _chatHbsDefault.default));
-const renderChatsPage = ()=>{
-    document.getElementById("root").innerHTML = comp();
-    (0, _.chatElement)("chatList");
-};
-
-},{"handlebars":"dH8Fg","bundle-text:./chat.hbs":"5Xg8w","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","/src/components/chatElement/":"9NXxI","./chat.less":"gsV1n"}],"5Xg8w":[function(require,module,exports) {
-module.exports = "<section class=\"chatPageWrapper\">\r\n    <div class=\"leftBlock\">\r\n        <div class=\"toProfile\">\r\n            <a href=\"#/profile\">Профиль ></a>\r\n        </div>\r\n        <div class=\"search\">Поиск</div>\r\n        <div class=\"chatList\" id=\"chatList\"></div>\r\n    </div>\r\n    <div class=\"chatWrapper\"></div>\r\n</section>";
-
-},{}],"9NXxI":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "chatElement", ()=>chatElement);
-var _handlebars = require("handlebars");
-var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-var _chatElementLess = require("./chatElement.less");
-var _chatElementHbs = require("bundle-text:./chatElement.hbs");
-var _chatElementHbsDefault = parcelHelpers.interopDefault(_chatElementHbs);
-var _createTemplate = require("/src/utils/createTemplate");
-const comp = (0, _handlebarsDefault.default).compile((0, _chatElementHbsDefault.default));
-const chatElement = (parentId)=>{
-    document.getElementById(parentId).appendChild((0, _createTemplate.createTemplate)(comp, {
-        username: "\u0410\u043D\u0434\u0440\u0435\u0439",
-        message: "\u041F\u0440\u0438\u0432\u0435\u0442, \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 lorem ipsum lorem ipsum"
-    }));
-    document.getElementById(parentId).appendChild((0, _createTemplate.createTemplate)(comp, {
-        username: "\u041E\u043B\u0435\u0433",
-        message: "\u041F\u0440\u0438\u0432\u0435\u0442, \u0432\u043E\u0442 \u043C\u0430\u043A\u0435\u0442\u044B {\u0432\u043B\u043E\u0436\u0435\u043D\u0438\u0435}"
-    }));
-};
-
-},{"handlebars":"dH8Fg","./chatElement.less":"il0Yv","bundle-text:./chatElement.hbs":"fYdCo","/src/utils/createTemplate":"9K9R7","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"il0Yv":[function() {},{}],"fYdCo":[function(require,module,exports) {
-module.exports = "<div class=\"chatElement\">\r\n    <div class=\"avatar\"></div>\r\n    <div class=\"chatContent\">\r\n        <div class=\"username\">{{username}}</div>\r\n        <div class=\"message\">{{message}}</div>\r\n        <div class=\"chatDate\"></div>\r\n        <div class=\"counter\"></div>\r\n    </div>\r\n</div>";
-
-},{}],"9K9R7":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "createTemplate", ()=>createTemplate);
-const createTemplate = (comp, data)=>{
-    const tml = document.createElement("div");
-    tml.innerHTML = comp(data);
-    return tml;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"gsV1n":[function() {},{}],"j3UBZ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "renderLogin", ()=>renderLogin);
-var _handlebars = require("handlebars");
-var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-var _loginLess = require("./login.less");
-var _loginHbs = require("bundle-text:./login.hbs");
-var _loginHbsDefault = parcelHelpers.interopDefault(_loginHbs);
-const comp = (0, _handlebarsDefault.default).compile((0, _loginHbsDefault.default));
-const renderLogin = ()=>{
-    document.getElementById("root").innerHTML = comp();
-};
-
-},{"handlebars":"dH8Fg","bundle-text:./login.hbs":"8Yhi4","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./login.less":"1Bvf3"}],"8Yhi4":[function(require,module,exports) {
-module.exports = "<div class=\"loginPage\">\r\n    <span class=\"enter\">Войти в аккаунт</span>\r\n    <form action=\"#/chat\" method=\"post\" class=\"inputForm\">\r\n        <div class=\"input\">\r\n            <input type=\"text\" name=\"login\" id=\"login\" placeholder=\"логин\">\r\n            <input type=\"password\" name=\"password\" id=\"password\" placeholder=\"пароль\">\r\n        </div>\r\n        <div class=\"loginControls\">\r\n            <button type=\"submit\" class=\"submit\">Войти</button>\r\n            <a href=\"#/signup\" class=\"redirect\">Регистрация</a>\r\n        </div>\r\n    </form>\r\n</div>";
-
-},{}],"1Bvf3":[function() {},{}],"cYj27":[function(require,module,exports) {
+},{}],"cYj27":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderSignup", ()=>renderSignup);
@@ -12016,10 +11945,86 @@ const renderSignup = ()=>{
     document.getElementById("root").innerHTML = comp();
 };
 
-},{"handlebars":"dH8Fg","bundle-text:./signup.hbs":"kXnck","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./login.less":"1Bvf3"}],"kXnck":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./login.less":"1Bvf3","bundle-text:./signup.hbs":"kXnck","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"1Bvf3":[function() {},{}],"kXnck":[function(require,module,exports) {
 module.exports = "<div class=\"loginPage\">\r\n    <span class=\"enter\">Регистрация</span>\r\n    <form action=\"#/chat\" method=\"post\" class=\"inputForm\">\r\n        <div class=\"input\">\r\n            <input type=\"text\" name=\"first_name\" id=\"first_name\" placeholder=\"Имя\">\r\n            <input type=\"text\" name=\"second_name\" id=\"second_name\" placeholder=\"Фамилия\">\r\n            <input type=\"text\" name=\"email\" id=\"email\" placeholder=\"Почта\">\r\n            <input type=\"phone\" name=\"phone\" id=\"phone\" placeholder=\"Телефон\">\r\n            <input type=\"text\" name=\"login\" id=\"login\" placeholder=\"Логин\">\r\n            <input type=\"password\" name=\"password\" id=\"password\" placeholder=\"Пароль\">\r\n        </div>\r\n        <div class=\"loginControls\">\r\n            <button type=\"submit\" class=\"submit\">Зарегистрироваться</button>\r\n            <a href=\"#/login\" class=\"redirect\">Войти</a>\r\n        </div>\r\n    </form>\r\n</div>";
 
-},{}],"1Bvf3":[function() {},{}],"6L53F":[function() {},{}],"fVlR8":[function(require,module,exports) {
+},{}],"ig64b":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "render404", ()=>render404);
+var _handlebars = require("handlebars");
+var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
+var _404Css = require("./404.css");
+var _404Hbs = require("bundle-text:./404.hbs");
+var _404HbsDefault = parcelHelpers.interopDefault(_404Hbs);
+const comp = (0, _handlebarsDefault.default).compile((0, _404HbsDefault.default));
+const render404 = ()=>{
+    document.getElementById("root").innerHTML = comp();
+};
+
+},{"handlebars":"dH8Fg","./404.css":"jm2am","bundle-text:./404.hbs":"eOnzr","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"jm2am":[function() {},{}],"eOnzr":[function(require,module,exports) {
+module.exports = "<div class=\"notFoundWrapper\">\r\n    <div class=\"notFound\">\r\n        <span>404</span>\r\n        <span>Вы попали не туда</span>\r\n        <a href=\"#/chat\">Перейти к чатам</a>\r\n    </div>\r\n</div>";
+
+},{}],"4sLvc":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "renderChatsPage", ()=>renderChatsPage);
+var _handlebars = require("handlebars");
+var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
+var _chatLess = require("./chat.less");
+var _chatHbs = require("bundle-text:./chat.hbs");
+var _chatHbsDefault = parcelHelpers.interopDefault(_chatHbs);
+var _ = require("/src/components/chatElement/");
+const comp = (0, _handlebarsDefault.default).compile((0, _chatHbsDefault.default));
+const renderChatsPage = ()=>{
+    document.getElementById("root").innerHTML = comp();
+    (0, _.renderChatElement)("chatList");
+};
+
+},{"handlebars":"dH8Fg","./chat.less":"gsV1n","bundle-text:./chat.hbs":"5Xg8w","/src/components/chatElement/":"9NXxI","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"gsV1n":[function() {},{}],"5Xg8w":[function(require,module,exports) {
+module.exports = "<section class=\"chatPageWrapper\">\r\n    <div class=\"leftBlock\">\r\n        <div class=\"toProfile\">\r\n            <a href=\"#/profile\">Профиль ></a>\r\n        </div>\r\n        <div class=\"search\">Поиск</div>\r\n        <ul class=\"chatList\" id=\"chatList\"></ul>\r\n    </div>\r\n    <div class=\"chatWrapper\"></div>\r\n</section>";
+
+},{}],"9NXxI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "renderChatElement", ()=>renderChatElement);
+var _handlebars = require("handlebars");
+var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
+var _chatElementLess = require("./chatElement.less");
+var _chatElementHbs = require("bundle-text:./chatElement.hbs");
+var _chatElementHbsDefault = parcelHelpers.interopDefault(_chatElementHbs);
+var _createTemplate = require("/src/utils/createTemplate");
+const comp = (0, _handlebarsDefault.default).compile((0, _chatElementHbsDefault.default));
+const data = {
+    chats: [
+        {
+            username: "\u0410\u043D\u0434\u0440\u0435\u0439",
+            message: "\u041F\u0440\u0438\u0432\u0435\u0442, \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 lorem ipsum lorem ipsum"
+        },
+        {
+            username: "\u041E\u043B\u0435\u0433",
+            message: "\u041F\u0440\u0438\u0432\u0435\u0442, \u0432\u043E\u0442 \u043C\u0430\u043A\u0435\u0442\u044B {\u0432\u043B\u043E\u0436\u0435\u043D\u0438\u0435}"
+        }, 
+    ]
+};
+const renderChatElement = (parentId)=>{
+    document.getElementById(parentId).appendChild((0, _createTemplate.createTemplate)(comp, data, "li"));
+};
+
+},{"handlebars":"dH8Fg","./chatElement.less":"il0Yv","bundle-text:./chatElement.hbs":"fYdCo","/src/utils/createTemplate":"9K9R7","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"il0Yv":[function() {},{}],"fYdCo":[function(require,module,exports) {
+module.exports = "<div class=\"chatElement\">\r\n    <div class=\"avatar\"></div>\r\n    <div class=\"chatContent\">\r\n        <div class=\"username\">{{username}}</div>\r\n        <div class=\"message\">{{message}}</div>\r\n        <div class=\"chatDate\"></div>\r\n        <div class=\"counter\"></div>\r\n    </div>\r\n</div>\r\n";
+
+},{}],"9K9R7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createTemplate", ()=>createTemplate);
+const createTemplate = (comp, data, tag = "div")=>{
+    const tml = document.createElement(tag);
+    tml.innerHTML = comp(data);
+    return tml;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"fVlR8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderProfilePage", ()=>renderProfilePage);
@@ -12028,21 +12033,46 @@ var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
 var _profileLess = require("./profile.less");
 var _profileHbs = require("bundle-text:./profile.hbs");
 var _profileHbsDefault = parcelHelpers.interopDefault(_profileHbs);
+var _ = require("./avatar/");
 const comp = (0, _handlebarsDefault.default).compile((0, _profileHbsDefault.default));
 const data = {
     email: "pochta@yandex.ru",
     login: "login",
     firstName: "Ivan",
     secondName: "Ivanov",
-    nickname: "Vanya",
     phone: "+7-999-131-31-67"
 };
 const renderProfilePage = ()=>{
     document.getElementById("root").innerHTML = comp(data);
+    (0, _.renderProfileAvatar)("profile-avatar");
 };
 
-},{"handlebars":"dH8Fg","./profile.less":"fK7OY","bundle-text:./profile.hbs":"iizYh","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"fK7OY":[function() {},{}],"iizYh":[function(require,module,exports) {
-module.exports = "<section class=\"profilePage\">\r\n    <nav>\r\n        <a href=\"#/chat\">Вернуться к чатам</a>\r\n    </nav>\r\n    <div class=\"profileContentWrapper\">\r\n        <div class=\"profileContent\">\r\n            <div class=\"profileAvatarWrapper\">\r\n                <figure>\r\n                    <div class=\"profileAvatar\">\r\n                        <img src=\"\" alt=\"\">\r\n                    </div>\r\n                    <figcaption class=\"nickname\">{{ nickname }}</figcaption>\r\n                </figure>\r\n            </div>\r\n            <div class=\"profileInfo\">\r\n                <div class=\"profileInfoElement email\">\r\n                    Почта\r\n                    <span>{{ email }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement login\">\r\n                    Логин\r\n                    <span>{{ login }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement firstName\">\r\n                    Имя\r\n                    <span>{{ firstName }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement secondName\">\r\n                    Фамилия\r\n                    <span>{{ secondName }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement nickname\">\r\n                    Имя в чате\r\n                    <span>{{ nickname }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement phone\">\r\n                    Телефон\r\n                    <span>{{ phone }}</span>\r\n                </div>\r\n            </div>\r\n            <div class=\"profileControls\">\r\n                <div class=\"profileInfoElement\">\r\n                    <span class=\"editInfo\" role=\"button\">Изменить данные</span>\r\n                </div>\r\n                <div class=\"profileInfoElement\">\r\n                    <span class=\"editInfo\" role=\"button\">Изменить пароль</span>\r\n                </div>\r\n                <div class=\"profileInfoElement\">\r\n                    <span class=\"signout\" role=\"button\">Выйти</span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n";
+},{"handlebars":"dH8Fg","./profile.less":"fK7OY","bundle-text:./profile.hbs":"iizYh","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./avatar/":"899Ba"}],"fK7OY":[function() {},{}],"iizYh":[function(require,module,exports) {
+module.exports = "<section class=\"profilePage\">\r\n    <nav>\r\n        <a href=\"#/chat\">Вернуться к чатам</a>\r\n    </nav>\r\n    <div class=\"profileContentWrapper\">\r\n        <div class=\"profileContent\">\r\n            <div class=\"profileAvatarWrapper\" id=\"profile-avatar\">\r\n            </div>\r\n            <div class=\"profileInfo\">\r\n                <div class=\"profileInfoElement email\">\r\n                    Почта\r\n                    <span>{{ email }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement login\">\r\n                    Логин\r\n                    <span>{{ login }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement firstName\">\r\n                    Имя\r\n                    <span>{{ firstName }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement secondName\">\r\n                    Фамилия\r\n                    <span>{{ secondName }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement nickname\">\r\n                    Имя в чате\r\n                    <span>{{ nickname }}</span>\r\n                </div>\r\n                <div class=\"profileInfoElement phone\">\r\n                    Телефон\r\n                    <span>{{ phone }}</span>\r\n                </div>\r\n            </div>\r\n            <div class=\"profileControls\">\r\n                <div class=\"profileInfoElement\">\r\n                    <span class=\"editInfo\" role=\"button\">Изменить данные</span>\r\n                </div>\r\n                <div class=\"profileInfoElement\">\r\n                    <span class=\"editInfo\" role=\"button\">Изменить пароль</span>\r\n                </div>\r\n                <div class=\"profileInfoElement\">\r\n                    <span class=\"signout\" role=\"button\">Выйти</span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n";
+
+},{}],"899Ba":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "renderProfileAvatar", ()=>renderProfileAvatar);
+var _handlebars = require("handlebars");
+var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
+var _avatarLess = require("./avatar.less");
+var _avatarHbs = require("bundle-text:./avatar.hbs");
+var _avatarHbsDefault = parcelHelpers.interopDefault(_avatarHbs);
+var _createTemplate = require("/src/utils/createTemplate");
+const comp = (0, _handlebarsDefault.default).compile((0, _avatarHbsDefault.default));
+const data = {
+    avatar: {
+        src: undefined
+    },
+    nickname: "Oleg"
+};
+const renderProfileAvatar = (parentId)=>{
+    document.getElementById(parentId).appendChild((0, _createTemplate.createTemplate)(comp));
+};
+
+},{"handlebars":"dH8Fg","./avatar.less":"2HD9n","bundle-text:./avatar.hbs":"83B5L","/src/utils/createTemplate":"9K9R7","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"2HD9n":[function() {},{}],"83B5L":[function(require,module,exports) {
+module.exports = "<div class=\"profileAvatar\">\r\n    <img src={{ avatar.src }} alt=\"profile avatar\" >\r\n    <label for=\"avatar\" class=\"avatarLabel\">Поменять аватар</label>\r\n    <input type=\"file\" name=\"avatar\" accept=\"image/*\" id=\"avatar\" class=\"profileAvatarInput\">\r\n</div>\r\n<span class=\"nickname\">{{ nickname }}</span>\r\n";
 
 },{}]},["8TWO2","b9BDZ"], "b9BDZ", "parcelRequire05aa")
 
