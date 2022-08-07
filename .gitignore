@@ -4,7 +4,6 @@
 coverage/
 dist/*
 build/*
-!dist/index.html
 node_modules/
 *.log
 *.css
