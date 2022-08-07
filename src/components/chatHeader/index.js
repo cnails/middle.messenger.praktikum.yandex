@@ -1,5 +1,5 @@
 import Handlebars from "handlebars";
-import './chatHeader.css';
+import './chatHeader.less';
 import tpl from 'bundle-text:./chatHeader.hbs';
 
 const component = Handlebars.compile(tpl);

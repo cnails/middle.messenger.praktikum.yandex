@@ -1,4 +1,4 @@
-import './style.css'
+import './style.less'
 import {renderLogin} from './pages/login/login';
 import {renderSignup} from './pages/login/signup';
 import {render404} from './pages/404/';
