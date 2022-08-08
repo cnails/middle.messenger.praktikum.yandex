@@ -39,6 +39,5 @@ const routeHandler = () => {
 }
 
 window.addEventListener('hashchange', routeHandler);
-window.addEventListener('locationchange', () => {console.log('location'); routeHandler()});
 
 window.onload = routeHandler;

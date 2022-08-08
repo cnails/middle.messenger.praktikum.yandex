@@ -5,7 +5,6 @@
   },
   "name": "yandex-chat",
   "version": "1.0.0",
-  "description": "Yandex practicum project",
   "source": "src/index.html",
   "scripts": {
     "build": "parcel build src/index.html --no-source-maps --target default --dist-dir ./dist",
