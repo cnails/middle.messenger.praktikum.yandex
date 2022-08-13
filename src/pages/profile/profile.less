@@ -1,0 +1,80 @@
+.profilePage {
+
+    .profileContentWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .profileInfoElement {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            padding-bottom: 8px;
+            
+            &:not(:last-child) {
+                border-bottom: 1px #d7d7d7 solid;
+            }
+
+            & > span {
+                color: #999999;
+            }
+        }
+
+        .profileContent {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .profileAvatarWrapper {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 60px;
+
+                .profileAvatar {
+                    width: 130px;
+                    height: 130px;
+                    border: 1px green solid;
+                    border-radius: 50%;
+                }
+
+                .nickname {
+                    margin-top: 20px;
+                    text-align: center;
+                }
+            }
+    
+            .profileInfo {
+                margin-bottom: 60px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .profileControls {
+            display: flex;
+            flex-direction: column;
+
+            .editInfo {
+                color: #3369F3;
+                cursor: pointer;
+            }
+
+            .signout {
+                color: #FF0000;
+                cursor: pointer;
+            }
+        }
+
+        .submitButton {
+            background-color: #3369F3;
+            color: #d7d7d7;
+            border-radius: 5px;
+            width: 280px;
+            border: none;
+            padding: 6px 0;
+            cursor: pointer;
+            margin: 32px auto 0;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<section class="chatPageWrapper">
+    <div class="leftBlock">
+        <div class="toProfile">
+            <a href="#/profile">Профиль ></a>
+        </div>
+        <input class="search" type="text" placeholder="Поиск" />
+        <ul class="chatList" id="chatList">
+            {{#each chats}} {{> chatListItem}} {{/each}}
+        </ul>
+    </div>
+    <section class="chatWrapper">
+        {{> selectedChat}}
+    </section>
+</section>

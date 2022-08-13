@@ -1,0 +1,17 @@
+<section class="profilePage">
+    <nav>
+        <a href="#/chat">Вернуться к чатам</a>
+    </nav>
+    <div class="profileContentWrapper">
+        <div class="profileContent">
+            <div class="profileAvatarWrapper" id="profile-avatar">
+                {{> profileAvatar}}
+            </div>
+            {{#if isChangePasswordMode}}
+                {{> changePasswordForm}}
+            {{else}}
+                {{> profileInfo}}
+            {{/if}}
+        </div>
+    </div>
+</section>
