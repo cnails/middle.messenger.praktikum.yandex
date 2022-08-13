@@ -1,20 +1,21 @@
-import Handlebars from "handlebars";
-import './profile.less';
-import '/src/components/avatar/avatar.less';
-import tpl from 'bundle-text:./profile.hbs';
-import profileAvatar from 'bundle-text:/src/components/avatar/avatar.hbs';
-import profileInfo from 'bundle-text:/src/components/profileInfo/profileInfo.hbs'; 
-import changePasswordForm from 'bundle-text:/src/components/changePasswordForm/changePasswordForm.hbs'; 
-import submitButton from 'bundle-text:/src/components/submitButton/submitButton.hbs'; 
-
+"use strict";
+exports.__esModule = true;
+exports.renderProfilePage = void 0;
+var handlebars_1 = require("handlebars");
+require("./profile.less");
+require("/src/components/avatar/avatar.less");
+var profile_hbs_1 = require("./profile.hbs");
+var avatar_hbs_1 = require("/src/components/avatar/avatar.hbs");
+var profileInfo_hbs_1 = require("/src/components/profileInfo/profileInfo.hbs");
+var changePasswordForm_hbs_1 = require("/src/components/changePasswordForm/changePasswordForm.hbs");
+var submitButton_hbs_1 = require("/src/components/submitButton/submitButton.hbs");
 // отвечает за переключение состояния страницы на режим изменения пароля
-const isChangePasswordMode = false;
+var isChangePasswordMode = false;
 // отвечает за переключение состояния страницы на режим изменения информации профиля
-const isChangeInfoMode = false;
-
-const data = {
+var isChangeInfoMode = false;
+var data = {
     avatar: {
-        src: undefined,
+        src: undefined
     },
     email: 'pochta@yandex.ru',
     login: 'login',
@@ -23,17 +24,15 @@ const data = {
     nickname: 'Vanya',
     phone: '+7-999-131-31-67',
     submitButtonText: 'Сохранить',
-    isChangePasswordMode,
-    isChangeInfoMode,
-}
-
-const component = Handlebars.compile(tpl);
-
-Handlebars.registerPartial('profileInfo', profileInfo);
-Handlebars.registerPartial('profileAvatar', profileAvatar);
-Handlebars.registerPartial('changePasswordForm', changePasswordForm);
-Handlebars.registerPartial('submitButton', submitButton);
-
-export const renderProfilePage = () => {
+    isChangePasswordMode: isChangePasswordMode,
+    isChangeInfoMode: isChangeInfoMode
+};
+var component = handlebars_1["default"].compile(profile_hbs_1["default"]);
+handlebars_1["default"].registerPartial('profileInfo', profileInfo_hbs_1["default"]);
+handlebars_1["default"].registerPartial('profileAvatar', avatar_hbs_1["default"]);
+handlebars_1["default"].registerPartial('changePasswordForm', changePasswordForm_hbs_1["default"]);
+handlebars_1["default"].registerPartial('submitButton', submitButton_hbs_1["default"]);
+var renderProfilePage = function () {
     document.getElementById('root').innerHTML = component(data);
-}
+};
+exports.renderProfilePage = renderProfilePage;
