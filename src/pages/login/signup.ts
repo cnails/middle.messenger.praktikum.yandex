@@ -1,6 +1,20 @@
 import './login.less';
-import tpl from './signup.hbs';
+import Component from '../../components/Component';
+import Button from '../../components/Button';
+import { EButtonType } from '../../components/Button/models';
+import template from './signup.hbs';
 
-export const renderSignup = () => {
-    document.getElementById('root')!.innerHTML = tpl();
-};
+export class Signup extends Component {
+    render() {
+        this.children.signupButton = new Button({
+            type: EButtonType.SUBMIT,
+            text: 'Зарегистрироваться',
+            className: 'test',
+            events: {
+                click: () => {console.log('clicked')},
+            }
+        });
+
+        return this.compile(template, {});
+    }
+}

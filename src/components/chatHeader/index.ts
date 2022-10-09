@@ -1,4 +1,9 @@
 import './chatHeader.less';
-import tpl from './chatHeader.hbs';
+import template from './chatHeader.hbs';
+import Component from '../Component';
 
-document.getElementById('root')!.innerHTML = tpl();
+export class ChatHeader extends Component {
+    render() {
+        return this.compile(template, {});
+    }
+};

@@ -5,10 +5,12 @@
         </div>
         <input class="search" type="text" placeholder="Поиск" />
         <ul class="chatList" id="chatList">
-            {{#each chats}} {{> chatListItem}} {{/each}}
+            {{{ chat-0 }}}
+            {{{ chat-1 }}}
+            {{!-- {{#each chats}} {{> chatListItem}} {{/each}} --}}
         </ul>
     </div>
     <section class="chatWrapper">
-        {{> selectedChat}}
+        {{!-- {{> selectedChat}} --}}
     </section>
 </section>

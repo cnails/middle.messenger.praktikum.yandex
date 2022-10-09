@@ -5,12 +5,12 @@
     <div class="profileContentWrapper">
         <div class="profileContent">
             <div class="profileAvatarWrapper" id="profile-avatar">
-                {{> profileAvatar}}
+                {{{ profileAvatar }}}
             </div>
             {{#if isChangePasswordMode}}
-                {{> changePasswordForm}}
+                {{{ changePasswordForm }}}
             {{else}}
-                {{> profileInfo}}
+                {{{ profileInfo }}}
             {{/if}}
         </div>
     </div>
