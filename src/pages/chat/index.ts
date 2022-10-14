@@ -1,9 +1,6 @@
-import Handlebars from 'handlebars';
 import './chat.less';
 import '/src/components/chatListItem/chatListItem.less';
 import template from './chat.hbs';
-import chatListItem from '/src/components/chatListItem/chatListItem.hbs';
-// import selectedChat from './selectedChat/selectedChat.hbs';
 import Component from '../../components/Component';
 import { ChatListItem } from '../../components/chatListItem';
 import { SelectedChat } from './selectedChat';

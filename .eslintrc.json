@@ -9,7 +9,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-unused-vars": 2,
+        "no-unused-vars": "off",
+        "no-undef": "warn",
         "max-len": [1, 100],
         "max-params": [2, 3]
     }

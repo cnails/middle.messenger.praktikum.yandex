@@ -12,7 +12,7 @@ interface IProps {
     type: EButtonType;
     text: string;
     events: {
-        click?: () => void;
+        click?: (event: Event) => void;
     }
     className?: string;
 }

@@ -6,4 +6,4 @@ export class ChatHeader extends Component {
     render() {
         return this.compile(template, {});
     }
-};
+}

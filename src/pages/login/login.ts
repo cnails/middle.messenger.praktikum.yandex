@@ -1,24 +1,31 @@
 import './login.less';
-import Component from '../../components/Component';
 import Button from '../../components/Button';
 import { EButtonType } from '../../components/Button/models';
 import template from './login.hbs';
+import Input from '../../components/input';
+import { Form } from '../../components/Form';
 
-const loginStoredDataRegex: Record<string, string> = {
-    login: '^[\\d\\w\\-]*[a-zA-Z]+[\\d\\w\\-]*$',
-    password: "^(?=.*[A-ZА-ЯЁ])(?=.*\\d).{8,40}$",
-}
-
-export class Login extends Component {
-    storeData() {
-    }
-
+export class Login extends Form {
     render() {
+        this.children.inputLogin = new Input({
+            type: "text",
+            name: "login",
+            id: "login",
+            placeholder: "логин",
+        });
+
+        this.children.inputPassword = new Input({
+            type: "password",
+            name: "password",
+            id: "password",
+            placeholder: "пароль",
+        });
+
         this.children.submitButton = new Button({
             type: EButtonType.SUBMIT,
             text: 'Войти',
             events: {
-                click: this.storeData,
+                click: (e: Event) => this.validateForm(e),
             }
         });
 

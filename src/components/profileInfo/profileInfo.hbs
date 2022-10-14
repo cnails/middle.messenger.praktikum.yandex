@@ -2,55 +2,55 @@
     <div class="profileInfo">
         <div class="profileInfoElement email">
             Почта
-            {{#if isChangeInfoMode}}
-                <input placeholder={{{ email }}} type="text" name="email">
+            {{#if true}}
+                {{{ emailInput }}}
             {{else}}
                 <span>{{{ email }}}</span>
             {{/if}}
         </div>
         <div class="profileInfoElement login">
             Логин
-            {{#if isChangeInfoMode}}
-                <input placeholder={{{ login }}} type="text" name="login">
+            {{#if true}}
+                {{{ loginInput }}}
             {{else}}
                 <span>{{{ login }}}</span>
             {{/if}}
         </div>
         <div class="profileInfoElement firstName">
             Имя
-            {{#if isChangeInfoMode}}
-                <input placeholder={{{ firstName }}} type="text" name="first_name">
+            {{#if true}}
+                {{{ firstNameInput }}}
             {{else}}
                 <span>{{{ firstName }}}</span>
             {{/if}}
         </div>
         <div class="profileInfoElement secondName">
             Фамилия
-            {{#if isChangeInfoMode}}
-                <input placeholder={{{ secondName }}} type="text" name="second_name">
+            {{#if true}}
+                {{{ secondNameInput }}}
             {{else}}
                 <span>{{{ secondName }}}</span>
             {{/if}}
         </div>
         <div class="profileInfoElement nickname">
             Имя в чате
-            {{#if isChangeInfoMode}}
-                <input placeholder={{{ nickname }}} type="text" name="display_name">
+            {{#if true}}
+                {{{ nicknameInput }}}
             {{else}}
                 <span>{{{ nickname }}}</span>
             {{/if}}
         </div>
         <div class="profileInfoElement phone">
             Телефон
-            {{#if isChangeInfoMode}}
-                <input placeholder={{{ phone }}} type="text" name="phone">
+            {{#if true}}
+                {{{ phoneInput }}}
             {{else}}
                 <span>{{{ phone }}}</span>
             {{/if}}
         </div>
     </div>
     <div class="profileControls">
-        {{#if isChangeInfoMode}}
+        {{#if true}}
             {{{ submitButton }}}
         {{else}}
             <div class="profileInfoElement">

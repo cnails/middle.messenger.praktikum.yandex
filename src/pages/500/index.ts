@@ -6,4 +6,4 @@ export class ErrorPage extends Component {
     render() {
         return this.compile(template, {});
     }
-};
+}

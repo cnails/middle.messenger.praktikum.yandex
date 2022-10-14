@@ -6,4 +6,4 @@ export class NotFound extends Component {
     render() {
         return this.compile(template, {});
     }
-};
+}

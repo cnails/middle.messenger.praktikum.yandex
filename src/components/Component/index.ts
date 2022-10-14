@@ -5,6 +5,7 @@ import { EEventBusActions } from "../EventBus/models/eventBusTypes";
 class Component {
   public id = nanoid(6);
   protected props: any;
+  public state: any;
   public children: Record<string, Component>;
   private eventBus: () => EventBus;
   private _element: HTMLElement | null = null;

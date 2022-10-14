@@ -6,11 +6,6 @@ import { ProfileAvatar } from '../../components/avatar';
 import { ProfileInfo } from '../../components/profileInfo';
 import { ChangePasswordForm } from '../../components/changePasswordForm';
 
-// отвечает за переключение состояния страницы на режим изменения пароля
-const isChangePasswordMode = false;
-// отвечает за переключение состояния страницы на режим изменения информации профиля
-const isChangeInfoMode = false;
-
 interface IProps {
     avatar: {
         src?: string,
