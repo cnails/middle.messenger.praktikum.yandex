@@ -9,7 +9,12 @@
         "allowSyntheticDefaultImports": true,
         "moduleResolution": "node",
         "target": "ES5",
-        "allowJs": true
+        "allowJs": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": false
     },
     "exclude": [
         "./node_modules",
@@ -20,12 +25,5 @@
     "include": [
         "**/*.ts",
         "**/*.js"
-    ],
-
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": false
+    ]
 }

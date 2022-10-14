@@ -84,7 +84,7 @@ class Component {
   }
 
   protected componentDidUpdate(oldProps: any, newProps: any) {
-    return true;
+    return oldProps !== newProps;
   }
 
   setProps = (nextProps: any) => {

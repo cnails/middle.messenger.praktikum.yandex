@@ -1,6 +1,5 @@
 import Button from "../Button";
 import { EButtonType } from "../Button/models";
-import Component from "../Component";
 import { Form } from "../Form";
 import Input from "../input";
 import template from './profileInfo.hbs';
