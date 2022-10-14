@@ -6,6 +6,6 @@
       "indentation": 4
     },
     "ignoreFiles": [
-      "build/*"
+      "dist/*"
     ]
 } 
