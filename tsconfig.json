@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "skipLibCheck": true,
+        "module": "es6",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "target": "ES5",
+        "allowJs": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": false
+    },
+    "exclude": [
+        "./node_modules",
+        "./.parcel-cache",
+        "./dist",
+        "./static"
+    ],
+    "include": [
+        "**/*.ts",
+        "**/*.js"
+    ]
+}
